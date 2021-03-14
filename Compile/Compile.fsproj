@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FSharp.Core" Version="[5.0.0]" />
+        <PackageReference Include="FSharp.Compiler.Service" Version="[38.0.0]" />
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.9.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="Library.fs"/>
+    </ItemGroup>
+
+</Project>
