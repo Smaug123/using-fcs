@@ -2,9 +2,14 @@ namespace Test
 
 open Compile
 open NUnit.Framework
+open System.IO
+open System.Runtime.InteropServices
 
 [<TestFixture>]
 module TestFoo =
+
+    let private mscorlib = Path.Combine (RuntimeEnvironment.GetRuntimeDirectory (), "mscorlib.dll")
+    let private netstandard = Path.Combine (RuntimeEnvironment.GetRuntimeDirectory (), "netstandard.dll")
 
     [<Test>]
     let way1 () =
@@ -14,9 +19,9 @@ module TestFoo =
             "-r"
             "FSharp.Core.dll"
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/mscorlib.dll"
+            mscorlib
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/netstandard.dll"
+            netstandard
         |]
         |> Compile.go
 
@@ -26,9 +31,9 @@ module TestFoo =
             "-r"
             "FSharp.Core.dll"
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/mscorlib.dll"
+            mscorlib
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/netstandard.dll"
+            netstandard
         |]
         |> Compile.go
 
@@ -45,9 +50,9 @@ module TestFoo =
             "-r"
             "FSharp.Core.dll"
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/mscorlib.dll"
+            mscorlib
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/netstandard.dll"
+            netstandard
         |]
         |> Compile.go
 
@@ -58,9 +63,9 @@ module TestFoo =
             "-r"
             "FSharp.Core.dll"
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/mscorlib.dll"
+            mscorlib
             "-r"
-            "/usr/local/share/dotnet/sdk/5.0.103/ref/netstandard.dll"
+            netstandard
         |]
         |> Compile.go
 
