@@ -6,12 +6,13 @@
 
     <ItemGroup>
         <PackageReference Update="FSharp.Core" Version="[5.0.0]" />
-        <PackageReference Include="FSharp.Compiler.Service" Version="[38.0.0]" />
-        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.9.0" />
+        <PackageReference Include="FSharp.Compiler.Service" Version="[38.0.2]" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="Library.fs"/>
+        <Compile Include="WeImportThisInFsi.fs" />
+        <Compile Include="Compile.fs" />
+        <Compile Include="SubsequentTestingIgnoreForNow.fs" />
     </ItemGroup>
 
 </Project>
